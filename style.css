@@ -1,44 +1,57 @@
 @media screen and (max-width: 500px) {
     .test {
-        color: orange;
+        color: forestgreen;
+        font-size: 40px;
+        font-family: "Doto", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        font-variation-settings:
+            "ROND" 0;
     }
 
     .top-page {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
 
     }
 
     .dropdown {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
         position: relative;
     }
 
-    .dropdown-content{
+
+
+    .dropdown-content {
         display: flex;
         flex-direction: column;
-        max-height: 0;  /* Start with height 0 (hidden) */
-        overflow: hidden;  /* Hide anything exceeding the height */
-        opacity: 0;  /* Initially transparent */
-        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;  /* Smooth transition */
-        background-color: #f9f9f9;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
         padding: 10px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         width: 150px;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+        text-align: center;
     }
 
     .dropdown-content.show {
-        max-height: 200px;  /* Allow the content to expand to a height when visible */
-        opacity: 1;  /* Fully visible */
+        max-height: 200px;
+        opacity: 1;
     }
 
 
     button {
         padding: 8px 16px;
         background-color: #4CAF50;
-        color: white; 
+        color: white;
         border: none;
         cursor: pointer;
         border-radius: 4px;
