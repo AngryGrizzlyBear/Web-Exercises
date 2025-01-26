@@ -61,13 +61,13 @@
         background-color: #45a049;
     }
 
-    .about-me {
+    .flex-container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .about-me-title {
+    .header-titles {
         color: forestgreen;
         font-size: 20px;
         font-family: "Doto", serif;
@@ -78,7 +78,7 @@
             "ROND" 0;
     }
 
-    .about-desc {
+    .desc-card {
         display: flex;
         border: solid 2px forestgreen;
         border-radius: 20px;
