@@ -61,4 +61,29 @@
         background-color: #45a049;
     }
 
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-title {
+        color: forestgreen;
+        font-size: 20px;
+        font-family: "Doto", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        font-variation-settings:
+            "ROND" 0;
+    }
+
+    .about-desc {
+        display: flex;
+        border: solid 2px forestgreen;
+        border-radius: 20px;
+        flex-wrap: wrap;  
+        padding: 15px;
+        margin: 10px;
+    }
 }
