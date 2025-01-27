@@ -1,4 +1,41 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+
+:root {
+    --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+    --clr-6: #052b2f;
+    --clr-7: #d3d3d3;
+}
+
+p {
+    color: var(--clr-7);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+body{background-color: black;}
 @media screen and (max-width: 500px) {
+
     .test {
         color: forestgreen;
         font-size: 40px;
@@ -9,6 +46,8 @@
         font-variation-settings:
             "ROND" 0;
     }
+
+    
 
     .top-page {
         display: flex;
@@ -80,10 +119,27 @@
 
     .desc-card {
         display: flex;
-        border: solid 2px forestgreen;
+        /* border: solid 2px forestgreen; */
         border-radius: 20px;
-        flex-wrap: wrap;  
+        flex-wrap: wrap;
         padding: 15px;
         margin: 10px;
+        background: var(--clr-6);
+        position: relative;
+    }
+
+    .desc-card::before,
+    .desc-card::after {
+        content: "";
+        position: absolute;
+        inset: -.2rem;
+        background: conic-gradient(from var(--gradient-angle), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-4), var(--clr-3));
+        border-radius: inherit;
+        animation: rotation 20s linear infinite;
+        z-index: -1;
+    }
+
+    .desc-card::after {
+        filter: blur(3.5rem);
     }
 }
